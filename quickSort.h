@@ -27,7 +27,7 @@ class QuickSort
         int arraySize;
 
         void quickSort(int, int);
-        void partition(int, int);
+        int partition(int, int);
         void swap(int, int);
 };
 
