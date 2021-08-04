@@ -14,19 +14,14 @@ QuickSort::QuickSort()
 
 QuickSort::~QuickSort() {}
 
-bool QuickSort::sorter(int size, const int fixItUp[])
+bool QuickSort::sorter(int size, int fixItUp[])
 {
     arraySize = size;
+    solvedArr = fixItUp;
 
-    int copyOrigArr[arraySize];
-    solvedArr = copyOrigArr;
+    quickSort(ARR_BEGIN, arraySize - 1);
 
-    for (int i = 0; i < arraySize; i++)
-    {
-        copyOrigArr[i] = fixItUp[i];
-    }
-
-    quickSort(ARR_BEGIN, arraySize);
+    return true;
 }
 
 void QuickSort::displaySortedArr()
@@ -38,7 +33,7 @@ void QuickSort::displaySortedArr()
 }
 //Private Methods
 void QuickSort::quickSort(int begin, int end)
-{
+{   
     if (begin < end)
     {
         int p = partition(begin, end);
@@ -52,7 +47,7 @@ int QuickSort::partition(int start, int finish)
     int pivot = solvedArr[finish];
     int pivotIndex = start;
     for(int i = start; i < finish; i++)
-    {
+    {   
         if(solvedArr[i] <= pivot) {
             swap(i, pivotIndex);
             pivotIndex++;

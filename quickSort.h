@@ -19,7 +19,7 @@ class QuickSort
         QuickSort();
         ~QuickSort();
 
-        bool sorter(int, const int[]);
+        bool sorter(int, int[]);
         void displaySortedArr();
 
     private:
