@@ -7,6 +7,8 @@ Purpose: 1-3 sentences about your program.
 #ifndef QUICK_SORT_H
 #define QUICK_SORT_H
 
+#define ARR_BEGIN 0
+
 #include <iostream>
 using std::cout;
 using std::cin;
@@ -17,7 +19,7 @@ class QuickSort
         QuickSort();
         ~QuickSort();
 
-        bool sorter(int, int[]);
+        bool sorter(int, const int[]);
         void displaySortedArr();
 
     private:
