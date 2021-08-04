@@ -11,7 +11,7 @@ Purpose: 1-3 sentences about your program.
 
 #include <iostream>
 using std::cout;
-using std::cin;
+using std::endl;
 
 class QuickSort
 {

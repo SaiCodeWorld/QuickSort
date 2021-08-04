@@ -29,6 +29,13 @@ bool QuickSort::sorter(int size, const int fixItUp[])
     quickSort(ARR_BEGIN, arraySize);
 }
 
+void QuickSort::displaySortedArr()
+{
+    for (int i = 0; i < arraySize; i++)
+    {
+        cout<<solvedArr[i]<<endl;
+    }
+}
 //Private Methods
 void QuickSort::quickSort(int begin, int end)
 {
@@ -57,5 +64,7 @@ int QuickSort::partition(int start, int finish)
 
 void QuickSort::swap(int currentLocation, int pivotIndex)
 {
-
+    int temp = solvedArr[currentLocation];
+    solvedArr[currentLocation] = solvedArr[pivotIndex];
+    solvedArr[pivotIndex] = temp;
 }
